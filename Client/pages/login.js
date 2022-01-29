@@ -15,7 +15,7 @@ export default function login() {
                 localStorage.setItem("userAuth", JSON.stringify(result.data.data))
                 window.location.href = "/dashboard"
             })
-            .catch((err) => { window.alert(err.response.data.data) })
+            .catch((err) => { window.alert(err.response?.data.data) || "error in login" })
 
 
     }
